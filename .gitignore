@@ -9,6 +9,8 @@ Desktop.ini
 $RECYCLE.BIN/
 
 # Eclipse
+bin/
+.classpath
 .settings
 .project
 */.settings
