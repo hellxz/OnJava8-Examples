@@ -8,6 +8,7 @@ buildscript {
         classpath 'me.champeau.gradle:jmh-gradle-plugin:0.5.2'
     }
 }
+apply plugin: 'java'
 
 //apply plugin: 'com.mindviewinc.example-output-verification'
 
@@ -19,11 +20,7 @@ buildscript {
     apply from: "$rootProject.projectDir/gradle/findbugs.gradle"
     apply plugin: 'com.mindviewinc.tagging'
 }*/
-apply from: "$rootProject.projectDir/gradle/jmh.gradle"
-apply plugin: 'java'
-sourceSets {
-    main {
-        java.srcDirs += ['src/main/java']
-    }
-}
+//apply from: "$rootProject.projectDir/gradle/jmh.gradle"
+
+//sourceSets.main.java.srcDirs = ['src/main/java']
 //apply from: 'gradle/subprojects.gradle'

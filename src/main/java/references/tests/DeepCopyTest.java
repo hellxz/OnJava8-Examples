@@ -2,8 +2,13 @@
 // (c)2021 MindView LLC: see Copyright.txt
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
-package references;
+package references.tests;
 import org.junit.jupiter.api.*;
+
+import references.DepthReading;
+import references.OceanReading;
+import references.TemperatureReading;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class DeepCopyTest {

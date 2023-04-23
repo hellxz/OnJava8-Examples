@@ -3,9 +3,12 @@
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
 // Simple use of JUnit to test CountedList.
-package validating;
+package validating.tests;
 import java.util.*;
 import org.junit.jupiter.api.*;
+
+import validating.CountedList;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class CountedListTest {

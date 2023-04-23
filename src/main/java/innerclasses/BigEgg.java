@@ -1,3 +1,5 @@
+package innerclasses;
+
 // innerclasses/BigEgg.java
 // (c)2021 MindView LLC: see Copyright.txt
 // We make no guarantees that this code is fit for any purpose.

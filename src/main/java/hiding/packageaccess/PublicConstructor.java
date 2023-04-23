@@ -4,6 +4,6 @@
 // Visit http://OnJava8.com for more book information.
 package hiding.packageaccess;
 
-class PublicConstructor {
+public class PublicConstructor {
   public PublicConstructor() {}
 }
