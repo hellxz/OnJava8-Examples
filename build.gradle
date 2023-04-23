@@ -1,5 +1,13 @@
 buildscript {
     repositories {
+	    maven {
+	        url 'https://maven.aliyun.com/repository/public/'
+	    }
+	    maven {
+	        url 'https://maven.aliyun.com/repository/spring/'
+	    }
+	    mavenLocal()
+	    mavenCentral()
         maven {
             url 'https://plugins.gradle.org/m2/'
         }
@@ -8,8 +16,28 @@ buildscript {
         classpath 'me.champeau.gradle:jmh-gradle-plugin:0.5.2'
     }
 }
-apply plugin: 'java'
 
+repositories {
+	maven {
+        url 'https://maven.aliyun.com/repository/public/'
+    }
+    maven {
+        url 'https://maven.aliyun.com/repository/spring/'
+    }
+}
+apply plugin: 'java'
+dependencies {
+	implementation 'org.slf4j:slf4j-api:1.7.21'
+    implementation 'ch.qos.logback:logback-classic:1.1.7'
+    implementation 'com.google.guava:guava:21.0'
+    //implementation "org.junit.jupiter:junit-jupiter-api:${junitJupiterVersion}"
+    //implementation "org.junit.jupiter:junit-jupiter-engine:${junitJupiterVersion}"
+    implementation(platform('org.junit:junit-bom:5.7.0'))
+    implementation('org.junit.jupiter:junit-jupiter')
+    implementation "org.openjdk.jmh:jmh-core:1.36"
+    implementation 'xml-apis:xml-apis:1.0.b2'
+    implementation 'com.io7m.xom:xom:1.2.10'
+}
 //apply plugin: 'com.mindviewinc.example-output-verification'
 
 /*subprojects {
@@ -22,5 +50,4 @@ apply plugin: 'java'
 }*/
 //apply from: "$rootProject.projectDir/gradle/jmh.gradle"
 
-//sourceSets.main.java.srcDirs = ['src/main/java']
 //apply from: 'gradle/subprojects.gradle'
